@@ -1,0 +1,88 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f0e5;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #ae7676;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.chart-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container img {
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+.chart-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.chart-container p {
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #ae7676;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #8c5a5a;
+}
+
+.learn-more {
+    background-color: #c79c9c;
+}
+
+.learn-more:hover {
+    background-color: #a67575;
+}
