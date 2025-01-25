@@ -80,12 +80,13 @@ errors = calculute_errors(results)
 under = 0
 total_under = 0
 total = 0
-# for i in list(errors[2024].keys()):
-#     for j in list(errors[2024][i].keys()):
-#         if errors[2024][i][j][0] < 0:
-#             under+=1
-#             total_under+=errors[2024][i][j][0]
-#         total+=1
-# print(errors)
-# print("The total percentage of pollsters average polls that underestimated trump in 2024 is  "+str(under/total))
-# print("The average amount of underestimating was "+str(total_under/total))
+
+for i in list(errors[2024].keys()):
+     for j in list(errors[2024][i].keys()):
+         if errors[2024][i][j][0] < 0:
+             under+=1
+             total_under+=errors[2024][i][j][0]
+         total+=1
+print(errors)
+print("The total percentage of pollsters average polls that underestimated trump in 2024 is  "+str(under/total))
+print("The average amount of underestimating was "+str(total_under/total))

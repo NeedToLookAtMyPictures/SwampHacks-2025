@@ -93,34 +93,37 @@ total = 0
 
 # ---------------------------------------------------------------------------------------------------
 
-# create 
-# iterate through the entire errors
-    # if 2024 
-
 flattened_data_2024 = []
 flattened_data_2020 = []
 
-for years, stats in data.items():
-    if years == 2024
-        for state, polls in states,items():
-            for poll_name, values in polls.items():
+for years, state in errors.items():
+    if years == 2024:
+        for state, polls in state.items():
+            for polls, values in polls.items():
                 flattened_data_2024.append({
-                    'Poll Name': poll_name,
-                    'Residual': values[0],
-                    'Polls': values[1]
+                    'Pollster': polls,
+                    'Polls': values[1],
+                    'Residual': values[0]
                 })
-    else
-        for state, polls in stsates,items():
-            for poll_name, values in polls.items():
+    else:
+        for state, polls in state.items():
+            for polls, values in polls.items():
                 flattened_data_2020.append({
-                    'Poll Name': poll_name,
-                    'Residual': values[0],
-                    'Polls': values[1]
+                    'Pollster': polls,
+                    'Polls': values[1],
+                    'Residual': values[0]
                 })
 
-chart_2024 = alt.Chart(flattened_data_2024).mark_point().encode(
-        x='a',
-    )
-chart_2020 = alt.Chart(flattened_data_2020).mark_point().encode(
-        x='a',
-    )
+print(type(flattened_data_2024))
+
+#chart_2024 = alt.Chart(flattened_data_2024).mark_point().encode(
+#        x = 'Polls',
+#        y = 'Residual'
+#    ).interactive()
+#chart_2024.save('chart_2024.html')
+
+#chart_2020 = alt.Chart(flattened_data_2020).mark_point().encode(
+#        x = 'Polls',
+#        y = 'Residual'
+#    ).interactive()
+#chart_2020.save('chart_2020.html')
