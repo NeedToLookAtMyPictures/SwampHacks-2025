@@ -9,19 +9,19 @@ def get_data_results(csv): # function putting 538s .csv file into a python dicti
     df = pd.read_csv(csv)
     results = {}
     for index, row in df.iterrows():
-        if type(row['state_abbrev']) == float:
-            row['state_abbrev'] = "USA" # converts null values into USA keyword (use "USA" in state column to access national data)
-        if row['percent'] >= 3 and row['stage'] == 'general':
+        if type(row['state']) == float:
+            row['state'] = "USA" # converts null values into USA keyword (use "USA" in state column to access national data)
+        if row['percent'] >= 10 and row['stage'] == 'general' and (row['cycle'] == 2020 or row['cycle'] == 2024):
             if row['cycle'] not in results:
                 results[row['cycle']] = {}
-            if row['state_abbrev'] not in results[row['cycle']]:
-                results[row['cycle']][row['state_abbrev']] = []
-            results[row['cycle']][row['state_abbrev']].append({'candidate': row['candidate_name'],'party': row['ballot_party'],'percentage': row['percent'],'votes': row['votes']})
+            if row['state'] not in results[row['cycle']]:
+                results[row['cycle']][row['state']] = []
+            results[row['cycle']][row['state']].append({'candidate': row['candidate_name'],'party': row['ballot_party'],'percentage': row['percent'],'votes': row['votes']})
     return results
 
 def get_data_polls(csv,state="USA",month=10):
     # USES STATES FULL NAMES BESIDES NATIONAL WHICH IS USA
-    df = pd.read_csv(csv)
+    df = pd.read_csv(csv,low_memory=False)
     results = {2020:{},2024:{}}
     for index, row in df.iterrows():
         if type(row['state']) == float:
@@ -55,8 +55,37 @@ def get_data_polls(csv,state="USA",month=10):
             value[1] = value[1] / value[2]
     return results
 
+def calculute_errors(results):
+    errors = {2020:{},2024:{}}
+    for i in list(results[2020].keys()):
+        if i != "District of Columbia":
+            polls = get_data_polls("538-poll-data/president_polls_historical-2018+.csv",state=i)
+            for y in [2020,2024]:
+                for j in list(polls[y].keys()):
 
-results = get_data_polls("538-poll-data/president_polls_historical-2018+.csv","Pennsylvania")
-poll = results[2024]
-sorted_data = dict(sorted(poll.items(), key=lambda x: x[1][2], reverse=True))
-print(sorted_data)
+                    result = [x for x in results[y][i] if x['candidate'] == "Donald Trump"]
+                    if result != {}:
+                        result = result[0]
+                        resid = (polls[y][j][0]-result['percentage']) # calculating difference between trumps predicted and actual for each poll
+                        errors[y][i] = {j:[resid,polls[y][j][2]]}
+    return errors
+
+
+
+
+results = get_data_results("election_results/election_results_presidential.csv")
+polls = get_data_polls("538-poll-data/president_polls_historical-2018+.csv")
+errors = calculute_errors(results)
+
+under = 0
+total_under = 0
+total = 0
+# for i in list(errors[2024].keys()):
+#     for j in list(errors[2024][i].keys()):
+#         if errors[2024][i][j][0] < 0:
+#             under+=1
+#             total_under+=errors[2024][i][j][0]
+#         total+=1
+# print(errors)
+# print("The total percentage of pollsters average polls that underestimated trump in 2024 is  "+str(under/total))
+# print("The average amount of underestimating was "+str(total_under/total))
