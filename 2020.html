@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoliCheck</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="PoliCheck Logo">
+            </div>
+            <h1>PoliCheck</h1>
+        </header>
+        <main>
+            <div class="chart-container">
+                <h2>Chart</h2>
+                <div id="vis"></div>
+                <p>
+                    jroaeijorijfirjfoajfaoijroaeijorijfirjfoajfaoijroaeijorijfirjfoajfaoij...
+                </p>
+            </div>
+            <div class="buttons">
+                <button class="btn toggle 2024">Toggle 2024</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        (function (vegaEmbed) {
+            var spec = {
+                "config": { "view": { "continuousWidth": 300, "continuousHeight": 300 } },
+                "data": { "name": "data-583e73726c1545c56c203344161a975c" },
+                "mark": { "type": "point" },
+                "encoding": {
+                    "color": { "field": "Origin", "type": "nominal" },
+                    "x": { "field": "Horsepower", "type": "quantitative" },
+                    "y": { "field": "Miles_per_Gallon", "type": "quantitative" }
+                },
+                "params": [
+                    {
+                        "name": "param_1",
+                        "select": { "type": "interval", "encodings": ["x", "y"] },
+                        "bind": "scales"
+                    }
+                ],
+                "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
+                "datasets": {
+                    "data-583e73726c1545c56c203344161a975c": [
+                        { "Name": "chevrolet chevelle malibu", "Miles_per_Gallon": 18.0, "Cylinders": 8, "Displacement": 307.0, "Horsepower": 130.0, "Weight_in_lbs": 3504, "Acceleration": 12.0, "Year": "1970-01-01T00:00:00", "Origin": "USA" },
+                        { "Name": "buick skylark 320", "Miles_per_Gallon": 15.0, "Cylinders": 8, "Displacement": 350.0, "Horsepower": 165.0, "Weight_in_lbs": 3693, "Acceleration": 11.5, "Year": "1970-01-01T00:00:00", "Origin": "USA" },
+                        { "Name": "plymouth satellite", "Miles_per_Gallon": 18.0, "Cylinders": 8, "Displacement": 318.0, "Horsepower": 150.0, "Weight_in_lbs": 3436, "Acceleration": 11.0, "Year": "1970-01-01T00:00:00", "Origin": "USA" },
+                        { "Name": "amc rebel sst", "Miles_per_Gallon": 16.0, "Cylinders": 8, "Displacement": 304.0, "Horsepower": 150.0, "Weight_in_lbs": 3433, "Acceleration": 12.0, "Year": "1970-01-01T00:00:00", "Origin": "USA" },
+                        { "Name": "ford torino", "Miles_per_Gallon": 17.0, "Cylinders": 8, "Displacement": 302.0, "Horsepower": 140.0, "Weight_in_lbs": 3449, "Acceleration": 10.5, "Year": "1970-01-01T00:00:00", "Origin": "USA" },
+                        { "Name": "ford galaxie 500", "Miles_per_Gallon": 15.0, "Cylinders": 8, "Displacement": 429.0, "Horsepower": 82.0, "Weight_in_lbs": 2720, "Acceleration": 19.4, "Year": "1982-01-01T00:00:00", "Origin": "USA" }
+                    ]
+                }
+            };
+            var embedOpt = { "mode": "vega-lite" };
+
+            function showError(el, error) {
+                el.innerHTML = ('<div style="color:red;">' +
+                    '<p>JavaScript Error: ' + error.message + '</p>' +
+                    "<p>This usually means there's a typo in your chart specification. " +
+                    "See the javascript console for the full traceback.</p>" +
+                    '</div>');
+                throw error;
+            }
+            const el = document.getElementById('vis');
+            vegaEmbed("#vis", spec, embedOpt)
+                .catch(error => showError(el, error));
+        })(vegaEmbed);
+    </script>
+
+</body>
+
+</html>
