@@ -1,6 +1,6 @@
 import pandas as pd
 from datetime import datetime
-# PoliCheck
+# PoliCheck 
 #['id', 'race_id', 'state_abbrev', 'state', 'office_id', 'office_name','office_seat_name', 'cycle', 'stage', 'special', 'party','politician_id', 'candidate_id', 'candidate_name', 'ballot_party','ranked_choice_round', 'votes', 'percent', 'unopposed', 'winner','alt_result_text', 'source'],type='object')
 
 
