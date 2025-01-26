@@ -17,10 +17,7 @@
     <div
         style="width: 80%; max-width: 1200px; text-align: center; padding: 20px; background-color: lightgray; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
         <header
-            style="background-image: url('https://images-ext-1.discordapp.net/external/tJwfbHWxEJ5BICXuP4r4Xj-M8an9Jt6XAQqgx4q_AKA/https/apps.bostonglobe.com/ideas/graphics/2021/12/editing-the-constitution/static/banner-c0ca5fd4a119a12aeaf88606acc73f0d.jpg?format=webp&width=1235&height=343'); background-size: 100%; background-position: 30% 40%; background-position: 30% 40%; padding: 10px 20px; border: 6px solid black; display: flex; align-items: center; filter: grayscale(100%);">
-            <div class="logo" style="flex: 0 0 auto;">
-                <img src="logo.png" alt="PoliCheck Logo" style="width:150px; height: auto;">
-            </div>
+            style="background-image: url('https://images-ext-1.discordapp.net/external/tJwfbHWxEJ5BICXuP4r4Xj-M8an9Jt6XAQqgx4q_AKA/https/apps.bostonglobe.com/ideas/graphics/2021/12/editing-the-constitution/static/banner-c0ca5fd4a119a12aeaf88606acc73f0d.jpg?format=webp&width=1235&height=343'); background-size: 100%; background-position: 30% 25%; padding: 10px 20px; border: 6px solid black; display: flex; align-items: center; filter: grayscale(100%);">
             <h1
                 style="font-size: 5em; color: white; margin-left: 20px; font-family: 'Times New Roman', Times, serif; text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 3px 3px 0 black;">
                 PoliCheck
@@ -51,52 +48,89 @@
 
                 <button class="btn learn-more" onclick="window.location.href = 'rankings.html'"
                     style="margin-top: 20px; padding: 10px 33px; border: 2px solid black; font-size: 1.5em;">
-                    Pollster Rankings
+                    Rankings
                 </button>
 
-                <button class="btn learn-more" onclick="window.location.href = '982024.html'" style="margin-top: 20px;
+                <button class="btn learn-more" onclick="window.location.href = 'whypoll.html'" style="margin-top: 20px;
                     padding: 10px 33px; border: 2px solid black; font-size: 1.5em;">
                     Why Polls?
                 </button>
 
-                <div class="description" style="display: flex; gap: 20px; align-items: center; margin-top: 20px;">
-                    <div style="flex: 1; text-align: left;">
-                        <span
-                            style="color: black; font-size: 22px; font-family: Inter, sans-serif; font-weight: 400; word-wrap: break-word;">
-                            The 2020 US Presidential Election was between Democratic candidate Joe Biden and Republican
-                            candidate Donald Trump. Key issues during the election were how to respond to COVID-19,
-                            civil unrest after the death of George Floyd, and the Supreme Court. Biden won, receiving
-                            306 electoral votes and 81 million popular votes while Trump received 232 electoral votes
-                            and 74 million popular votes.
-                        </span>
-                    </div>
-                    <img style="width: 10%; height: auto; box-shadow: 0px 4px 4px rgba(0,0,0,0.25); border-radius: 0px; border: 5px #E81B23 solid;"
-                        src="Trump Headshot.png" />
-                    <img style="width: 10%; height: auto; box-shadow: 0px 4px 4px rgba(0,0,0,0.25); border-radius: 0px; border: 5px #00AEF3 solid;"
-                        src="Biden Headshot.png" />
+                <div class="window" style="width: 1192px; margin-top: 20px">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Trump v. Biden</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
 
+
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <div class="description"
+                            style="display: flex; gap: 20px; align-items: center; margin-top: 20px;">
+                            <div style="flex: 1; text-align: left;">
+                                <span
+                                    style="color: black; font-size: 22px; font-family: Inter, sans-serif; font-weight: 400; word-wrap: break-word;">
+                                    The 2020 US Presidential Election was between Democratic candidate Joe Biden and
+                                    Republican
+                                    candidate Donald Trump. Key issues during the election were how to respond to
+                                    COVID-19,
+                                    civil unrest after the death of George Floyd, and the Supreme Court. Biden won,
+                                    receiving
+                                    306 electoral votes and 81 million popular votes while Trump received 232 electoral
+                                    votes
+                                    and 74 million popular votes.
+                                </span>
+                            </div>
+                            <img style="width: 10%; height: auto; box-shadow: 0px 4px 4px rgba(0,0,0,0.25); border-radius: 0px; border: 5px #E81B23 solid;"
+                                src="Trump Headshot.png" />
+                            <img style="width: 10%; height: auto; box-shadow: 0px 4px 4px rgba(0,0,0,0.25); border-radius: 0px; border: 5px #00AEF3 solid;"
+                                src="Biden Headshot.png" />
+
+                        </div>
+
+                    </div>
                 </div>
 
-        </main>
-        <div class="buttons" style="margin-top: 20px; text-align: center;">
-        </div>
+                <div class="window" style="width: 1192px; margin-top: 20px">
+                    <div class="title-bar">
+                        <div class="title-bar-text">Harris v. Trump</div>
+                        <div class="title-bar-controls">
+                            <button aria-label="Minimize"></button>
+                            <button aria-label="Maximize"></button>
+                            <button aria-label="Close"></button>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <div class="description"
+                            style="display: flex; gap: 20px; align-items: center; margin-top: 20px;">
+                            <img style="width: 10%; height: auto; box-shadow: 0px 4px 4px rgba(0,0,0,0.25); border-radius: 0px; border: 5px #00AEF3 solid;"
+                                src="Harris Headshot.png" />
+                            <img style="width: 10%; height: auto; box-shadow: 0px 4px 4px rgba(0,0,0,0.25); border-radius: 0px; border: 5px #E81B23 solid;"
+                                src="Trump Headshot.png" />
+                            <div style="flex: 1; text-align: left;">
+                                <span
+                                    style="color: black; font-size: 22px; font-family: Inter, sans-serif; font-weight: 400; word-wrap: break-word;">
+                                    The 2024 US Presidential Election was between Democratic candidate Kamala Harris and
+                                    Republican
+                                    candidate Donald Trump. Key issues during the election were the economy, foreign
+                                    policy -
+                                    particularly the US support for Ukraine against Russia - illegal immigration, and
+                                    abortion.
+                                    Trump
+                                    won, receiving 312 electoral votes and 77 million popular votes while Harris
+                                    received 226
+                                    electoral
+                                    votes and 75 million popular votes.
+                                </span>
+                            </div>
+                        </div>
+                        </span>
+                    </div>
 
-        <div class="description" style="display: flex; gap: 20px; align-items: center; margin-top: 20px;">
-            <img style="width: 10%; height: auto; box-shadow: 0px 4px 4px rgba(0,0,0,0.25); border-radius: 0px; border: 5px #E81B23 solid;"
-                src="Trump Headshot.png" />
-            <img style="width: 10%; height: auto; box-shadow: 0px 4px 4px rgba(0,0,0,0.25); border-radius: 0px; border: 5px #00AEF3 solid;"
-                src="Harris Headshot.png" />
-            <div style="flex: 1; text-align: left;">
-                <span
-                    style="color: black; font-size: 22px; font-family: Inter, sans-serif; font-weight: 400; word-wrap: break-word;">
-                    The 2024 US Presidential Election was between Democratic candidate Kamala Harris and Republican
-                    candidate Donald Trump. Key issues during the election were the economy, foreign policy -
-                    particularly the US support for Ukraine against Russia - illegal immigration, and abortion. Trump
-                    won, receiving 312 electoral votes and 77 million popular votes while Harris received 226 electoral
-                    votes and 75 million popular votes.
-                </span>
-            </div>
-        </div>
+                </div>
 
 
     </div>

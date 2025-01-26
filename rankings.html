@@ -9,100 +9,587 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
 </head>
 
 <body
-    style="margin: 0; padding: 0; height: 100%; display: flex; justify-content: center; align-items: center; background-color: lightgray;">
+    style="margin: 0; padding: 0; height: 100%; display: flex; justify-content: center; align-items: center; background-color: darkgray;">
     <div
-        style="width: 80%; max-width: 1200px; text-align: center; padding: 20px; background-color: darkgray; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        style="width: 80%; max-width: 1200px; text-align: center; padding: 20px; background-color: lightgray; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
         <header
-            style="background-color: #BC6666; padding: 10px 20px; border: 3px solid #BC6666; display: flex; align-items: center;">
-            <div class="logo" style="flex: 0 0 auto;">
-                <img src="logo.png" alt="PoliCheck Logo" style="width: 50px; height: auto;">
-            </div>
-            <h1 style="font-size: 5em; color: white; margin-left: 20px; font-family: 'Times New Roman', Times, serif">
-                PoliCheck</h1>
+            style="background-image: url('https://images-ext-1.discordapp.net/external/tJwfbHWxEJ5BICXuP4r4Xj-M8an9Jt6XAQqgx4q_AKA/https/apps.bostonglobe.com/ideas/graphics/2021/12/editing-the-constitution/static/banner-c0ca5fd4a119a12aeaf88606acc73f0d.jpg?format=webp&width=1235&height=343'); background-size: 100%; background-position: 30% 25%; padding: 10px 20px; border: 6px solid black; display: flex; align-items: center; filter: grayscale(100%);">
+            <h1
+                style="font-size: 5em; color: white; margin-left: 20px; font-family: 'Times New Roman', Times, serif; text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 3px 3px 0 black;">
+                PoliCheck
+            </h1>
         </header>
+
+        <div class="sunken-panel" style="height: 400px; width: 520px; margin-top: 20px">
+            <table class="interactive" style="margin-top: 0px; height: 120px; width: 500px">
+                <thead>
+                    <tr style="text-align: right;">
+                        <th>Polling Company</th>
+                        <th>Aggregated Error</th>
+                        <th>Aggregated Amount</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Spry Strategies</td>
+                        <td>0.2231</td>
+                        <td>2</td>
+                        <td>3.366930</td>
+                    </tr>
+                    <tr>
+                        <td>Emerson</td>
+                        <td>0.2524</td>
+                        <td>4</td>
+                        <td>2.981891</td>
+                    </tr>
+                    <tr>
+                        <td>SoCal Strategies</td>
+                        <td>0.4423</td>
+                        <td>1</td>
+                        <td>1.698286</td>
+                    </tr>
+                    <tr>
+                        <td>Big Data Poll</td>
+                        <td>0.6077</td>
+                        <td>4</td>
+                        <td>1.244578</td>
+                    </tr>
+                    <tr>
+                        <td>Quantus Insights</td>
+                        <td>0.6077</td>
+                        <td>2</td>
+                        <td>1.239370</td>
+                    </tr>
+                    <tr>
+                        <td>Rasmussen</td>
+                        <td>0.6719</td>
+                        <td>9</td>
+                        <td>1.139675</td>
+                    </tr>
+                    <tr>
+                        <td>Harris Poll</td>
+                        <td>0.6719</td>
+                        <td>1</td>
+                        <td>1.118842</td>
+                    </tr>
+                    <tr>
+                        <td>Swayable</td>
+                        <td>0.7469</td>
+                        <td>4</td>
+                        <td>1.014567</td>
+                    </tr>
+                    <tr>
+                        <td>AtlasIntel</td>
+                        <td>0.7642</td>
+                        <td>11</td>
+                        <td>1.010064</td>
+                    </tr>
+                    <tr>
+                        <td>ActiVote</td>
+                        <td>0.8223</td>
+                        <td>5</td>
+                        <td>0.925097</td>
+                    </tr>
+                    <tr>
+                        <td>HarrisX/Harris Poll</td>
+                        <td>0.9577</td>
+                        <td>4</td>
+                        <td>0.793543</td>
+                    </tr>
+                    <tr>
+                        <td>SurveyMonkey</td>
+                        <td>1.3803</td>
+                        <td>62</td>
+                        <td>0.704818</td>
+                    </tr>
+                    <tr>
+                        <td>Patriot Polling</td>
+                        <td>1.3577</td>
+                        <td>1</td>
+                        <td>0.555009</td>
+                    </tr>
+                    <tr>
+                        <td>Fabrizio/GBAO</td>
+                        <td>1.4577</td>
+                        <td>2</td>
+                        <td>0.519717</td>
+                    </tr>
+                    <tr>
+                        <td>Kaplan Strategies</td>
+                        <td>1.4577</td>
+                        <td>1</td>
+                        <td>0.517113</td>
+                    </tr>
+                    <tr>
+                        <td>Deltapoll</td>
+                        <td>1.4577</td>
+                        <td>1</td>
+                        <td>0.517113</td>
+                    </tr>
+                    <tr>
+                        <td>John Zogby Strategies/EMI Research Solutions</td>
+                        <td>1.7719</td>
+                        <td>4</td>
+                        <td>0.433691</td>
+                    </tr>
+                    <tr>
+                        <td>USC Dornsife</td>
+                        <td>4.9127</td>
+                        <td>96</td>
+                        <td>0.402666</td>
+                    </tr>
+                    <tr>
+                        <td>TIPP</td>
+                        <td>4.1218</td>
+                        <td>78</td>
+                        <td>0.385084</td>
+                    </tr>
+                    <tr>
+                        <td>HarrisX</td>
+                        <td>2.4997</td>
+                        <td>29</td>
+                        <td>0.375557</td>
+                    </tr>
+                    <tr>
+                        <td>Florida Atlantic University/Mainstreet Research</td>
+                        <td>2.4577</td>
+                        <td>2</td>
+                        <td>0.310372</td>
+                    </tr>
+                    <tr>
+                        <td>Gateway Political Strategies</td>
+                        <td>2.4577</td>
+                        <td>1</td>
+                        <td>0.307768</td>
+                    </tr>
+                    <tr>
+                        <td>Fairleigh Dickinson</td>
+                        <td>2.4577</td>
+                        <td>1</td>
+                        <td>0.307768</td>
+                    </tr>
+                    <tr>
+                        <td>co/efficient</td>
+                        <td>2.4577</td>
+                        <td>1</td>
+                        <td>0.307768</td>
+                    </tr>
+                    <tr>
+                        <td>Cometrends</td>
+                        <td>2.6719</td>
+                        <td>1</td>
+                        <td>0.283303</td>
+                    </tr>
+                    <tr>
+                        <td>Gravis Marketing (2020 and earlier)</td>
+                        <td>2.6719</td>
+                        <td>1</td>
+                        <td>0.283303</td>
+                    </tr>
+                    <tr>
+                        <td>OnMessage Inc.</td>
+                        <td>2.7910</td>
+                        <td>3</td>
+                        <td>0.276533</td>
+                    </tr>
+                    <tr>
+                        <td>American Pulse</td>
+                        <td>2.9077</td>
+                        <td>2</td>
+                        <td>0.263144</td>
+                    </tr>
+                    <tr>
+                        <td>Morning Consult</td>
+                        <td>7.0296</td>
+                        <td>60</td>
+                        <td>0.262942</td>
+                    </tr>
+                    <tr>
+                        <td>Ipsos</td>
+                        <td>11.8224</td>
+                        <td>67</td>
+                        <td>0.237918</td>
+                    </tr>
+                    <tr>
+                        <td>SurveyUSA</td>
+                        <td>3.3386</td>
+                        <td>3</td>
+                        <td>0.232458</td>
+                    </tr>
+                    <tr>
+                        <td>Noble Predictive Insights</td>
+                        <td>3.4577</td>
+                        <td>5</td>
+                        <td>0.229928</td>
+                    </tr>
+                    <tr>
+                        <td>Clarity</td>
+                        <td>3.4577</td>
+                        <td>1</td>
+                        <td>0.219511</td>
+                    </tr>
+                    <tr>
+                        <td>Paradigm</td>
+                        <td>3.4577</td>
+                        <td>1</td>
+                        <td>0.219511</td>
+                    </tr>
+                    <tr>
+                        <td>Cygnal</td>
+                        <td>3.6077</td>
+                        <td>4</td>
+                        <td>0.218305</td>
+                    </tr>
+                    <tr>
+                        <td>Beacon/Shaw</td>
+                        <td>3.7142</td>
+                        <td>6</td>
+                        <td>0.217553</td>
+                    </tr>
+                    <tr>
+                        <td>U. Massachusetts - Lowell</td>
+                        <td>3.6719</td>
+                        <td>1</td>
+                        <td>0.206858</td>
+                    </tr>
+                    <tr>
+                        <td>Winston</td>
+                        <td>3.6719</td>
+                        <td>1</td>
+                        <td>0.206858</td>
+                    </tr>
+                    <tr>
+                        <td>YouGov</td>
+                        <td>9.2664</td>
+                        <td>47</td>
+                        <td>0.203333</td>
+                    </tr>
+                    <tr>
+                        <td>Yale Youth Poll</td>
+                        <td>3.8577</td>
+                        <td>1</td>
+                        <td>0.197021</td>
+                    </tr>
+                    <tr>
+                        <td>Targoz Market Research</td>
+                        <td>3.9577</td>
+                        <td>2</td>
+                        <td>0.194712</td>
+                    </tr>
+                    <tr>
+                        <td>John Zogby Strategies</td>
+                        <td>4.0077</td>
+                        <td>2</td>
+                        <td>0.192348</td>
+                    </tr>
+                    <tr>
+                        <td>RMG Research</td>
+                        <td>4.3962</td>
+                        <td>8</td>
+                        <td>0.191435</td>
+                    </tr>
+                    <tr>
+                        <td>Angus Reid</td>
+                        <td>4.1296</td>
+                        <td>2</td>
+                        <td>0.186824</td>
+                    </tr>
+                    <tr>
+                        <td>ABC/Washington Post</td>
+                        <td>4.4219</td>
+                        <td>4</td>
+                        <td>0.180027</td>
+                    </tr>
+                    <tr>
+                        <td>Marquette Law School</td>
+                        <td>4.4577</td>
+                        <td>4</td>
+                        <td>0.178665</td>
+                    </tr>
+                    <tr>
+                        <td>Echelon Insights</td>
+                        <td>4.6296</td>
+                        <td>4</td>
+                        <td>0.172418</td>
+                    </tr>
+                    <tr>
+                        <td>Tufts</td>
+                        <td>4.6296</td>
+                        <td>3</td>
+                        <td>0.169814</td>
+                    </tr>
+                    <tr>
+                        <td>Innovative Research Group</td>
+                        <td>4.6719</td>
+                        <td>1</td>
+                        <td>0.163138</td>
+                    </tr>
+                    <tr>
+                        <td>Whitman Insight Strategies</td>
+                        <td>4.6719</td>
+                        <td>1</td>
+                        <td>0.163138</td>
+                    </tr>
+                    <tr>
+                        <td>J.L. Partners</td>
+                        <td>5.2142</td>
+                        <td>4</td>
+                        <td>0.154255</td>
+                    </tr>
+                    <tr>
+                        <td>Rethink Priorities</td>
+                        <td>5.1719</td>
+                        <td>1</td>
+                        <td>0.147619</td>
+                    </tr>
+                    <tr>
+                        <td>Big Village</td>
+                        <td>5.8243</td>
+                        <td>6</td>
+                        <td>0.144396</td>
+                    </tr>
+                    <tr>
+                        <td>Marist</td>
+                        <td>5.8796</td>
+                        <td>6</td>
+                        <td>0.143185</td>
+                    </tr>
+                    <tr>
+                        <td>RABA Research</td>
+                        <td>5.4577</td>
+                        <td>1</td>
+                        <td>0.140025</td>
+                    </tr>
+                    <tr>
+                        <td>Monmouth</td>
+                        <td>5.4577</td>
+                        <td>1</td>
+                        <td>0.140025</td>
+                    </tr>
+                    <tr>
+                        <td>Suffolk</td>
+                        <td>5.9296</td>
+                        <td>4</td>
+                        <td>0.136901</td>
+                    </tr>
+                    <tr>
+                        <td>Public Opinion Strategies</td>
+                        <td>5.6719</td>
+                        <td>1</td>
+                        <td>0.134835</td>
+                    </tr>
+                    <tr>
+                        <td>Opinium</td>
+                        <td>6.0052</td>
+                        <td>3</td>
+                        <td>0.132704</td>
+                    </tr>
+                    <tr>
+                        <td>Pew</td>
+                        <td>6.1296</td>
+                        <td>3</td>
+                        <td>0.130170</td>
+                    </tr>
+                    <tr>
+                        <td>Hart/POS</td>
+                        <td>6.9963</td>
+                        <td>8</td>
+                        <td>0.128033</td>
+                    </tr>
+                    <tr>
+                        <td>Leger</td>
+                        <td>7.0296</td>
+                        <td>6</td>
+                        <td>0.122317</td>
+                    </tr>
+                    <tr>
+                        <td>UMass Amherst/YouGov</td>
+                        <td>6.6296</td>
+                        <td>2</td>
+                        <td>0.118337</td>
+                    </tr>
+                    <tr>
+                        <td>Quinnipiac</td>
+                        <td>6.6719</td>
+                        <td>2</td>
+                        <td>0.117620</td>
+                    </tr>
+                    <tr>
+                        <td>Data for Progress</td>
+                        <td>7.8239</td>
+                        <td>8</td>
+                        <td>0.116693</td>
+                    </tr>
+                    <tr>
+                        <td>GBAO</td>
+                        <td>6.6719</td>
+                        <td>1</td>
+                        <td>0.115016</td>
+                    </tr>
+                    <tr>
+                        <td>Qriously</td>
+                        <td>7.6719</td>
+                        <td>5</td>
+                        <td>0.110780</td>
+                    </tr>
+                    <tr>
+                        <td>Navigator</td>
+                        <td>7.7963</td>
+                        <td>5</td>
+                        <td>0.109220</td>
+                    </tr>
+                    <tr>
+                        <td>CES / YouGov</td>
+                        <td>7.6296</td>
+                        <td>4</td>
+                        <td>0.108718</td>
+                    </tr>
+                    <tr>
+                        <td>Change Research</td>
+                        <td>7.8796</td>
+                        <td>5</td>
+                        <td>0.108203</td>
+                    </tr>
+                    <tr>
+                        <td>CNN/SSRS</td>
+                        <td>8.1296</td>
+                        <td>6</td>
+                        <td>0.107880</td>
+                    </tr>
+                    <tr>
+                        <td>Siena/NYT</td>
+                        <td>8.7962</td>
+                        <td>7</td>
+                        <td>0.103493</td>
+                    </tr>
+                    <tr>
+                        <td>Redfield &amp; Wilton Strategies</td>
+                        <td>10.4124</td>
+                        <td>11</td>
+                        <td>0.100675</td>
+                    </tr>
+                    <tr>
+                        <td>aytm.com</td>
+                        <td>7.6719</td>
+                        <td>1</td>
+                        <td>0.100364</td>
+                    </tr>
+                    <tr>
+                        <td>Research Co.</td>
+                        <td>8.6296</td>
+                        <td>4</td>
+                        <td>0.097327</td>
+                    </tr>
+                    <tr>
+                        <td>PRRI</td>
+                        <td>8.6719</td>
+                        <td>3</td>
+                        <td>0.094299</td>
+                    </tr>
+                    <tr>
+                        <td>Saint Leo U.</td>
+                        <td>8.3719</td>
+                        <td>1</td>
+                        <td>0.092190</td>
+                    </tr>
+                    <tr>
+                        <td>Kaiser Family Foundation</td>
+                        <td>8.6719</td>
+                        <td>2</td>
+                        <td>0.091695</td>
+                    </tr>
+                    <tr>
+                        <td>Global Marketing Research Services</td>
+                        <td>9.3969</td>
+                        <td>2</td>
+                        <td>0.085022</td>
+                    </tr>
+                    <tr>
+                        <td>AP-NORC</td>
+                        <td>10.6719</td>
+                        <td>1</td>
+                        <td>0.072882</td>
+                    </tr>
+                    <tr>
+                        <td>Long Island University</td>
+                        <td>10.6719</td>
+                        <td>1</td>
+                        <td>0.072882</td>
+                    </tr>
+                    <tr>
+                        <td>Edison Research</td>
+                        <td>12.5719</td>
+                        <td>2</td>
+                        <td>0.064865</td>
+                    </tr>
+                    <tr>
+                        <td>Public First</td>
+                        <td>12.6719</td>
+                        <td>1</td>
+                        <td>0.061790</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <script>
+            document.querySelectorAll('table.interactive').forEach(element => {
+                element.addEventListener('click', (event) => {
+                    const highlightedClass = 'highlighted';
+                    const isRow = element => element.tagName === 'TR' && element.parentElement.tagName === 'TBODY';
+                    const newlySelectedRow = event.composedPath().find(isRow);
+                    const previouslySelectedRow = Array.from(newlySelectedRow.parentElement.children).filter(isRow).find(element => element.classList.contains(highlightedClass));
+                    if (previouslySelectedRow) {
+                        previouslySelectedRow.classList.toggle(highlightedClass);
+                    }
+
+                    if (newlySelectedRow) {
+                        newlySelectedRow.classList.toggle(highlightedClass);
+                    }
+                })
+            });
+        </script>
+
+        </table>
+
         <main>
-            <div class="chart-container" style="gap: 20px; align-items: center">
-                <div>
-                    <h2>Chart</h2>
-                    <div id="vis" style="width: 407px; height: 355px; border: 4px solid #BC6666;"></div>
-                </div>
-                <div style="display: flex; gap: 5px;">
-                    <img style="width: 15%; height: 15%; border-radius: 9999px; border: 5px #BC6666 solid;"
-                        src="Trump Headshot.png" />
-                    <img style="width: 15%; height: 15%; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 9999px; border: 5px #BC6666 solid;"
-                        src="Harris Headshot.png" />
-                </div>
 
+            <button class="btn learn-more" onclick="window.location.href = 'chart.html'"
+                style="margin-top: 20px; padding: 10px 33px; border: 2px solid black; font-size: 1.5em;">
+                Pollster Plot
+            </button>
 
-                <div style="display: flex; flex-direction: column; justify-content: flex-start; gap: 180px;">
-                    <div>
-                        <span
-                            style="color: black; font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word; align-items: center;">
-                            The 2024 US Presidential Election was between Democratic candidate Kamala Harris and
-                            Republican candidate Donald Trump. Key issues during the election were the economy, foreign
-                            policy - particularly the US support for Ukraine against Russia - illegal immigration, and
-                            abortion. Trump won, receiving 312 electoral votes and 77 million popular votes while Harris
-                            received 226 electoral votes and 75 million popular votes.
-                        </span>
-                    </div>
+            <button class="btn learn-more" onclick="window.location.href = 'whypoll.html'" style="margin-top: 20px;
+                    padding: 10px 33px; border: 2px solid black; font-size: 1.5em;">
+                Why Polls?
+            </button>
+
+            <div class="description" style="display: flex; gap: 20px; align-items: center; margin-top: 20px;">
+                <div style="flex: 1; text-align: left;">
+                    <span
+                        style="color: black; font-size: 22px; font-family: Inter, sans-serif; font-weight: 400; word-wrap: break-word;">
+                        ....
+                    </span>
                 </div>
             </div>
-            <div class="buttons" style="margin-top: 20px;">
-                <button class="btn learn-more" onclick="window.location.href = '982020.html'">
-                    Toggle 2020
-                </button>
-            </div>
+
         </main>
+        <div class="buttons" style="margin-top: 20px; text-align: center;">
+        </div>
     </div>
 
-    <script>
-        (function (vegaEmbed) {
-            var spec = {
-                "config": { "view": { "continuousWidth": 300, "continuousHeight": 300 } },
-                "data": { "name": "data-583e73726c1545c56c203344161a975c" },
-                "mark": { "type": "point" },
-                "encoding": {
-                    "color": { "field": "Origin", "type": "nominal" },
-                    "x": { "field": "Horsepower", "type": "quantitative" },
-                    "y": { "field": "Miles_per_Gallon", "type": "quantitative" }
-                },
-                "params": [
-                    {
-                        "name": "param_1",
-                        "select": { "type": "interval", "encodings": ["x", "y"] },
-                        "bind": "scales"
-                    }
-                ],
-                "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json",
-                "datasets": {
-                    "data-583e73726c1545c56c203344161a975c": [
-                        { "Name": "chevrolet chevelle malibu", "Miles_per_Gallon": 18.0, "Cylinders": 8, "Displacement": 307.0, "Horsepower": 130.0, "Weight_in_lbs": 3504, "Acceleration": 12.0, "Year": "1970-01-01T00:00:00", "Origin": "USA" },
-                        { "Name": "buick skylark 320", "Miles_per_Gallon": 15.0, "Cylinders": 8, "Displacement": 350.0, "Horsepower": 165.0, "Weight_in_lbs": 3693, "Acceleration": 11.5, "Year": "1970-01-01T00:00:00", "Origin": "USA" },
-                        { "Name": "plymouth satellite", "Miles_per_Gallon": 18.0, "Cylinders": 8, "Displacement": 318.0, "Horsepower": 150.0, "Weight_in_lbs": 3436, "Acceleration": 11.0, "Year": "1970-01-01T00:00:00", "Origin": "USA" },
-                        { "Name": "amc rebel sst", "Miles_per_Gallon": 16.0, "Cylinders": 8, "Displacement": 304.0, "Horsepower": 150.0, "Weight_in_lbs": 3433, "Acceleration": 12.0, "Year": "1970-01-01T00:00:00", "Origin": "USA" },
-                        { "Name": "ford torino", "Miles_per_Gallon": 17.0, "Cylinders": 8, "Displacement": 302.0, "Horsepower": 140.0, "Weight_in_lbs": 3449, "Acceleration": 10.5, "Year": "1970-01-01T00:00:00", "Origin": "USA" },
-                        { "Name": "ford galaxie 500", "Miles_per_Gallon": 15.0, "Cylinders": 8, "Displacement": 429.0, "Horsepower": 82.0, "Weight_in_lbs": 2720, "Acceleration": 19.4, "Year": "1982-01-01T00:00:00", "Origin": "USA" }
-                    ]
-                }
-            };
-            var embedOpt = { "mode": "vega-lite" };
 
-            function showError(el, error) {
-                el.innerHTML = ('<div style="color:red;">' +
-                    '<p>JavaScript Error: ' + error.message + '</p>' +
-                    "<p>This usually means there's a typo in your chart specification. " +
-                    "See the javascript console for the full traceback.</p>" +
-                    '</div>');
-                throw error;
-            }
-            const el = document.getElementById('vis');
-            vegaEmbed("#vis", spec, embedOpt)
-                .catch(error => showError(el, error));
-        })(vegaEmbed);
-    </script>
+    </div>
+
+
+</body>
+
+</html>
 
 </body>
 
