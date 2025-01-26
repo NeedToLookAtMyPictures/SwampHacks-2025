@@ -5,47 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PoliCheck</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/98.css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 </head>
 
-<body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <img src="logo.png" alt="PoliCheck Logo">
+<body
+    style="margin: 0; padding: 0; height: 100%; display: flex; justify-content: center; align-items: center; background-color: lightgray;">
+    <div
+        style="width: 80%; max-width: 1200px; text-align: center; padding: 20px; background-color: darkgray; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        <header
+            style="background-color: #BC6666; padding: 10px 20px; border: 3px solid #BC6666; display: flex; align-items: center;">
+            <div class="logo" style="flex: 0 0 auto;">
+                <img src="logo.png" alt="PoliCheck Logo" style="width: 50px; height: auto;">
             </div>
-            <h1>PoliCheck</h1>
+            <h1 style="font-size: 5em; color: white; margin-left: 20px; font-family: 'Times New Roman', Times, serif">
+                PoliCheck</h1>
         </header>
         <main>
-            <div class="chart-container">
-                <h2>Chart</h2>
-                <div id="vis"></div>
+            <div class="chart-container" style="gap: 20px; align-items: center">
+                <div>
+                    <h2>Chart</h2>
+                    <div id="vis" style="width: 407px; height: 355px; border: 4px solid #BC6666;"></div>
+                </div>
+                <div style="display: flex; gap: 5px;">
+                    <img style="width: 15%; height: 15%; border-radius: 9999px; border: 5px #BC6666 solid;"
+                        src="Trump Headshot.png" />
+                    <img style="width: 15%; height: 15%; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 9999px; border: 5px #BC6666 solid;"
+                        src="Harris Headshot.png" />
+                </div>
+
+
+                <div style="display: flex; flex-direction: column; justify-content: flex-start; gap: 180px;">
+                    <div>
+                        <span
+                            style="color: black; font-size: 22px; font-family: Inter; font-weight: 400; word-wrap: break-word; align-items: center;">
+                            The 2024 US Presidential Election was between Democratic candidate Kamala Harris and
+                            Republican candidate Donald Trump. Key issues during the election were the economy, foreign
+                            policy - particularly the US support for Ukraine against Russia - illegal immigration, and
+                            abortion. Trump won, receiving 312 electoral votes and 77 million popular votes while Harris
+                            received 226 electoral votes and 75 million popular votes.
+                        </span>
+                    </div>
+                </div>
             </div>
-
-
-            <div style="width: 100%; height: 100%; text-align: center"><span
-                    style="color: black; font-size: 40px; font-family: Inter; font-weight: 400; word-wrap: break-word"><br /></span><span
-                    style="color: black; font-size: 20px; font-family: Inter; font-weight: 400; word-wrap: break-word">The
-                    The 2024 US Presidential Election was between Democratic candidate Kamala Harris and Republican
-                    candidate Donald Trump. Key issues during the election were the economy, foreign policy -
-                    particularly the US support for Ukraine against Russia - illegal immigration, and abortion. Trump
-                    won, receiving 312 electoral votes and 77 million popular votes while Harris received 226 electoral
-                    votes and 75 million popular votes.</span>
-            </div>
-
-            <img style="width: 20%; height: 20%; border-radius: 9999px; border: 5px #BC6666 solid; margin-top: 20px;"
-                src="Trump Headshot.png" />
-
-            <img style="width: 20%; height: 20%; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 9999px; border: 5px #BC6666 solid; margin-top: 20px;"
-                src="Harris Headshot.png" />
-
-
-
-            <div class="buttons">
-                <button class="btn learn-more" onclick="window.location.href = '2020.html'">Toggle 2020</button>
+            <div class="buttons" style="margin-top: 20px;">
+                <button class="btn learn-more" onclick="window.location.href = '982020.html'">
+                    Toggle 2020
+                </button>
             </div>
         </main>
     </div>
