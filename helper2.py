@@ -99,14 +99,8 @@ def plot_errors(df):
     )
 
     return chart
-results = get_data_results("election_results/election_results_presidential.csv")
-errors = calculate_errors(results)
-df = transform_errors_to_df(errors)
-chart = plot_errors(df)
-chart.save("chart.html")
 
-print(errors)
-df = pd.DataFrame()
+
 
 
 
