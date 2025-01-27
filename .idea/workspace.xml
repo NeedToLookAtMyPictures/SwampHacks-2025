@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="206c25ca-182e-4c35-9fce-37fc26b41083" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/538-poll-data/governor_polls-2024.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/538-poll-data/governor_polls_historical-2016+.csv" beforeDir="false" />
@@ -15,12 +16,18 @@
       <change beforePath="$PROJECT_DIR$/538-poll-data/presidential_general_averages-2024.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/538-poll-data/senate_polls-2024.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/538-poll-data/senate_polls_historical-2016.csv" beforeDir="false" />
+=======
+    <list default="true" id="56eac5c7-6b46-4b22-b58c-c4a8248a52a0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rankings.html" beforeDir="false" afterPath="$PROJECT_DIR$/rankings.html" afterDir="false" />
+>>>>>>> front-end
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -76,4 +83,14 @@
       </breakpoints>
     </breakpoint-manager>
   </component>
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "front-end"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+>>>>>>> front-end
 </project>
