@@ -9,18 +9,19 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </head>
 
 <body
     style="margin: 0; padding: 0; height: 100%; display: flex; justify-content: center; align-items: center; background-color: darkgray;">
     <div
-        style="width: 80%; max-width: 1200px; text-align: center; padding: 20px; background-color: lightgray; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+        style="width: 80%; max-width: 1500px; text-align: center; padding: 20px; background-color: lightgray; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); border: 4px">
         <!-- Header -->
         <header
-            style="background-image: url('https://images-ext-1.discordapp.net/external/tJwfbHWxEJ5BICXuP4r4Xj-M8an9Jt6XAQqgx4q_AKA/https/apps.bostonglobe.com/ideas/graphics/2021/12/editing-the-constitution/static/banner-c0ca5fd4a119a12aeaf88606acc73f0d.jpg?format=webp&width=1235&height=343'); background-size: 100%; background-position: 30% 25%; padding: 10px 20px; border: 6px solid black; display: flex; align-items: center; filter: grayscale(100%);">
+            style="background-image: url('https://images-ext-1.discordapp.net/external/tJwfbHWxEJ5BICXuP4r4Xj-M8an9Jt6XAQqgx4q_AKA/https/apps.bostonglobe.com/ideas/graphics/2021/12/editing-the-constitution/static/banner-c0ca5fd4a119a12aeaf88606acc73f0d.jpg?format=webp&width=1235&height=343'); background-size: 100%; background-position: 30% 25%; padding: 10px 20px; border: 6px solid black; display: flex; align-items: center; filter: grayscale(40%);">
             <h1
-                style="font-size: 5em; color: white; margin-left: 20px; font-family: 'Times New Roman', Times, serif; text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 3px 3px 0 black;">
+                style="font-size: 5em; color: white; margin-left: 20px; font-family: 'Times New Roman', Times, serif; text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 3px 3px 0 black; border: 3px">
                 PoliCheck
             </h1>
         </header>
@@ -572,7 +573,8 @@
                     <div class="description" style="margin-top: 20px; text-align: left">
                         <span
                             style="color: black; font-size: 22px; font-family: Inter, sans-serif; font-weight: 400; word-wrap: break-word; ">
-                            We decided for the following formula for our PoliCheck score: \(P =(\frac{1}{ER})0.75  + (\frac{S}{max(S_n)})0.25\). We chose this methodology in order to consider both the
+                            We decided for the following formula for our PoliCheck score: \(P =(\frac{1}{ER})0.75 +
+                            (\frac{S}{max(S_n)})0.25\). We chose this methodology in order to consider both the
                             aggregated error as well as the number of polls that were taken by each company. The error
                             is measured inversely meaning that a lower aggregated error (ideal) leads to a higher
                             overall score. We weighted this category at 75% due to the philosophy that accuracy should
