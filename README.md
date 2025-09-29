@@ -1,7 +1,7 @@
 # Welcome to PoliCheck!
 ## Created by: Ben Adelman, Kushagra Katiyar, Bayan Mahmoodi
 
-https://policheck.us/
+https://policheck.us/ -> if the domain is expired, you will have to clone the repository and run the index file. 
 
 The website is stored in the front-end branch and our visualization source code is in the back-end(benji) branch. The front end utilizes a combination of HTML, CSS98 style, and JavaScript. While not having an official backend, the data was gathered and created in Python using primarly the libraries Pandas and Altair.  Polling is a crucial part of our democracy. The ability to gain insight into elections before they actually occur is invaluable in planning for the future, gauging the current cultural climate of our country, and allowing politicians to clearly see what their constituents want. However, in reasons years, polling (specifically for US Presidential elections) has fallen off a cliff in terms of accuracy. It is clear that the methodology used in these polls is flawed in some way or another.  We hope to show the need for change with our visualizations. Despite recent inaccuracies, we still believe that polling can be an extremely useful pillar of the democratic process if used properly. This was created for the SwampHacks X hackathon. We hope you enjoy our project!
 
